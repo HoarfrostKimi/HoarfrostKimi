@@ -47,7 +47,7 @@
 
   <text x="72" y="200" fill="url(#hkmName)" font-family="'Segoe UI', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="82" font-weight="600" letter-spacing="-2">HoarfrostKimi</text>
 
-  <text x="74" y="252" fill="#A3B0C2" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif" font-size="23" letter-spacing="0.8">黎枝 · 把重复劳动写成工具，把喜欢的 App 拆开重写</text>
+  <text x="74" y="252" fill="#A3B0C2" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif" font-size="23" letter-spacing="0.8">Android 开发 · 模块化架构 · 桌面工具链</text>
 
   <rect x="72" y="282" width="620" height="1" fill="url(#hkmRule)"/>
 
