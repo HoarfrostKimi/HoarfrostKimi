@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" fill="none" role="img" aria-label="HoarfrostKimi">
+  <defs>
+    <linearGradient id="hkmBg" x1="0" y1="0" x2="1200" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#080B11"/>
+      <stop offset="0.52" stop-color="#0B1018"/>
+      <stop offset="1" stop-color="#080B11"/>
+    </linearGradient>
+    <radialGradient id="hkmGlowBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(120 -30) rotate(24) scale(560 460)">
+      <stop stop-color="#3D6BF5" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#3D6BF5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hkmGlowViolet" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1090 360) rotate(-140) scale(480 420)">
+      <stop stop-color="#8B5CF6" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hkmName" x1="72" y1="150" x2="560" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.58" stop-color="#DCE6FF"/>
+      <stop offset="1" stop-color="#8FA8FF"/>
+    </linearGradient>
+    <linearGradient id="hkmRule" x1="72" y1="0" x2="640" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hkmRing" x1="900" y1="60" x2="1120" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7FA2FF" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#7FA2FF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.45"/>
+    </linearGradient>
+    <pattern id="hkmGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#hkmBg)"/>
+  <rect width="1200" height="340" fill="url(#hkmGrid)"/>
+  <rect width="1200" height="340" fill="url(#hkmGlowBlue)"/>
+  <rect width="1200" height="340" fill="url(#hkmGlowViolet)"/>
+  <rect x="0.5" y="0.5" width="1199" height="339" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <!-- corner marks -->
+  <path d="M28 68V28H68" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.5"/>
+  <path d="M1132 272V312H1092" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.5"/>
+
+  <!-- left block -->
+  <text x="72" y="112" fill="#6E8BFF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" letter-spacing="5.2">ANDROID · KOTLIN · DESKTOP TOOLING</text>
+
+  <text x="72" y="196" fill="url(#hkmName)" font-family="'Segoe UI', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="64" font-weight="600" letter-spacing="-1.6">HoarfrostKimi</text>
+
+  <text x="72" y="240" fill="#9AA7BA" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif" font-size="19" letter-spacing="0.6">黎枝 · 把重复劳动写成能跑的工具</text>
+
+  <rect x="72" y="272" width="568" height="1" fill="url(#hkmRule)"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" letter-spacing="1.4">
+    <text x="72" y="304" fill="#5E6A7C">KOTLIN / ANDROID</text>
+    <text x="252" y="304" fill="#39414F">/</text>
+    <text x="276" y="304" fill="#5E6A7C">ELECTRON / TYPESCRIPT</text>
+    <text x="492" y="304" fill="#39414F">/</text>
+    <text x="516" y="304" fill="#5E6A7C">FFMPEG / AUTOMATION</text>
+  </g>
+
+  <!-- right ornament -->
+  <g opacity="0.95">
+    <circle cx="1004" cy="170" r="112" stroke="url(#hkmRing)" stroke-width="1.2"/>
+    <circle cx="1004" cy="58" r="3.4" fill="#7FA2FF"/>
+    <circle cx="1004" cy="58" r="10" fill="#7FA2FF" fill-opacity="0.16"/>
+    <text x="1004" y="228" text-anchor="middle" fill="#FFFFFF" fill-opacity="0.09" font-family="Georgia, 'Times New Roman', serif" font-size="196">H</text>
+    <text x="1004" y="318" text-anchor="middle" fill="#4B5464" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="3.4">EST. 2024</text>
+  </g>
+</svg>
