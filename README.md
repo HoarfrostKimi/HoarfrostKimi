@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="HoarfrostKimi · 黎枝" width="100%" />
+  <img src="assets/banner.svg?v=20261108" alt="HoarfrostKimi · 黎枝" width="100%" />
 </p>
 
 <p align="center">
