@@ -4,8 +4,8 @@
 
 <p align="center">
   <a href="https://github.com/HoarfrostKimi?tab=repositories"><img alt="repositories" src="https://img.shields.io/badge/REPOSITORIES-0A0D14?style=flat-square&logo=github&logoColor=white"></a>
-  <a href="https://github.com/HoarfrostKimi/Video-Merger"><img alt="video-merger" src="https://img.shields.io/badge/VIDEO--MERGER-0A0D14?style=flat-square&logo=electron&logoColor=9FEAF9"></a>
-  <a href="https://github.com/HoarfrostKimi/PredictCoin"><img alt="predictcoin" src="https://img.shields.io/badge/PREDICT--COIN-0A0D14?style=flat-square&logo=android&logoColor=3DDC84"></a>
+  <a href="https://github.com/HoarfrostKimi/Video-Merger/releases"><img alt="video-merger" src="https://img.shields.io/github/v/release/HoarfrostKimi/Video-Merger?style=flat-square&label=VIDEO-MERGER&color=0A0D14&logo=electron&logoColor=9FEAF9"></a>
+  <a href="https://github.com/HoarfrostKimi/PredictCoin/releases"><img alt="predictcoin" src="https://img.shields.io/github/v/release/HoarfrostKimi/PredictCoin?style=flat-square&label=PREDICT-COIN&color=0A0D14&logo=android&logoColor=3DDC84"></a>
 </p>
 
 ---
@@ -20,12 +20,6 @@ B 站赛事预测每场都要算仓位，靠感觉容易上头 —— 于是有�
 主战场是 **Kotlin / Android**：MVVM、Room、自绘组件、不依赖 Android 的纯函数计算引擎。
 桌面上的活交给 **TypeScript + Electron**，音视频交给 **FFmpeg**。
 
-三条偏好基本没变过：
-
-- **离线优先** —— 能在本机算完的，不联网、不上传
-- **少要权限** —— 数据存在自己的机器上，工具不该比它解决的问题更麻烦
-- **先算清楚再动手** —— 能推导的就别拍脑袋，公式错了代码写得再漂亮也没用
-
 ---
 
 ### 作品
@@ -37,6 +31,13 @@ B 站赛事预测每场都要算仓位，靠感觉容易上头 —— 于是有�
 | **[TODO](https://github.com/HoarfrostKimi/TODO)** | 待办 + 番茄钟。Room 多用户隔离、拖动排序、侧滑删除、自定义时长 | `Kotlin` `MVVM` `Room` `RxJava` |
 | **[RedRockHomeWork](https://github.com/HoarfrostKimi/RedRockHomeWork)** | 安卓登录系统（早期练习） | `Java` `Android` |
 | **[GreetingCard](https://github.com/HoarfrostKimi/GreetingCard)** · **[Zhihu](https://github.com/HoarfrostKimi/Zhihu)** | 贺卡、知乎客户端 —— 练手用 | `Kotlin` |
+
+### 发布
+
+| 应用 | 平台 | 安装包 |
+| :-- | :-- | :-- |
+| **Video-Merger** `v1.0.0` | Windows 10 / 11 | [video-merger-1.0.0-setup.exe](https://github.com/HoarfrostKimi/Video-Merger/releases/download/v1.0.0/video-merger-1.0.0-setup.exe) · 199 MB，内置 Chromium + FFmpeg |
+| **PredictCoin** `v1.0` | Android 7.0+ | [PredictCoin-1.0.apk](https://github.com/HoarfrostKimi/PredictCoin/releases/download/v1.0/PredictCoin-1.0.apk) · 7.8 MB |
 
 ---
 
@@ -68,26 +69,19 @@ B 站赛事预测每场都要算仓位，靠感觉容易上头 —— 于是有�
 
 ---
 
-### GitHub
+### 工程习惯
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=HoarfrostKimi&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github&bg_color=00000000&title_color=FFFFFF&text_color=C3CCD9&icon_color=7FA2FF" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=HoarfrostKimi&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github&bg_color=00000000&title_color=0A0D14&text_color=4A5568&icon_color=3D6BF5" />
-    <img width="49%" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=HoarfrostKimi&show_icons=true&hide_border=true&include_all_commits=true&rank_icon=github&bg_color=00000000&title_color=0A0D14&text_color=4A5568&icon_color=3D6BF5" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=HoarfrostKimi&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=FFFFFF&text_color=C3CCD9" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=HoarfrostKimi&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=0A0D14&text_color=4A5568" />
-    <img width="41%" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=HoarfrostKimi&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=0A0D14&text_color=4A5568" />
-  </picture>
-</p>
+- **提交前跑测试和类型检查**，卡住就修，不用 `--no-verify` 绕过去
+- **一次提交只装一件事**，无关改动单独留着，方便回退
+- **依赖能不加就不加**，能用标准库就不引框架
+- **能本地算的不要联网**，能不申请权限就不申请
+- **界面能自己画就自己画** —— 预测币的卡片、滑块、收益曲线都是 View + Canvas 手写的
 
 ---
 
 ### 在做
 
-- 给 PredictCoin 补引擎的单测（边界盘口、连败降档、约束取最小），UI 继续全手写，不套 Material 默认样式
+- 给 PredictCoin 补引擎单测：边界盘口、连败降档、约束取最小
 - Video-Merger 的投稿链路跟着 B 站改版走：双比例封面、创作声明必填、后台标签页节流
 - 系统补 Android 基础：View 的测量与绘制、启动性能、Jetpack 组件到底在做什么
 
