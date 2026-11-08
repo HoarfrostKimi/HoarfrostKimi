@@ -34,12 +34,10 @@
 
 <p align="center"><sub>发现 · 主题列表的共享元素转场　　·　　排行 · 首项升级为视频卡并自动播放</sub></p>
 
-| 模块 | 实现 |
-| :-- | :-- |
-| **发现** | 分类网格 + 主题推荐。分类页用 **RV 嵌套 RV** 换掉 ScrollView —— 不然上滑时没法跟底部导航栏联动；分类详情用协调者布局，折叠后分类名收进 Toolbar；主题列表做共享元素转场，并加 50ms 延迟避开首帧未加载导致的动画畸变 |
-| **排行** | ViewPager2 双页切换，重写 ConstraintLayout 解决与外层滚动的滑动冲突；切到排行页时首个 item 自动升级成视频卡并用 ExoPlayer 播放，滑出屏幕立即降级、暂停并释放播放器 |
-| **数据** | **Paging 3 + Flow** 做无限加载，`LoadStateAdapter` 统一 loading / retry / 到底三种状态；网络层以 Retrofit + Flow + StateFlow 为主，部分老页面沿用 RxJava + LiveData |
-| **踩过的坑** | 列表复用导致播放器错位、转场首帧畸变、ViewPager2 与内层 RV 争抢滑动 —— 全都是自己定位、自己改的 |
+- **发现** ｜ 分类网格 + 主题推荐。分类页用 **RV 嵌套 RV** 换掉 ScrollView —— 不然上滑时没法跟底部导航栏联动；分类详情用协调者布局，折叠后分类名收进 Toolbar；主题列表做共享元素转场，并加 50ms 延迟避开首帧未加载导致的动画畸变
+- **排行** ｜ ViewPager2 双页切换，重写 ConstraintLayout 解决与外层滚动的滑动冲突；切到排行页时首个 item 自动升级成视频卡并用 ExoPlayer 播放，滑出屏幕立即降级、暂停并释放播放器
+- **数据** ｜ **Paging 3 + Flow** 做无限加载，`LoadStateAdapter` 统一 loading / retry / 到底三种状态；网络层以 Retrofit + Flow + StateFlow 为主，部分老页面沿用 RxJava + LiveData
+- **踩过的坑** ｜ 列表复用导致播放器错位、转场首帧畸变、ViewPager2 与内层 RV 争抢滑动 —— 全都是自己定位、自己改的
 
 `Kotlin` `Jetpack` `MVVM` `Paging 3` `Coroutines` `Flow` `Retrofit` `RxJava` `ExoPlayer` `ViewPager2`
 
