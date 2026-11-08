@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/generalio/OpenEyes"><img alt="openeyes" src="https://img.shields.io/badge/OPEN--EYES-0A0D14?style=flat-square&logo=android&logoColor=3DDC84"></a>
   <a href="https://github.com/HoarfrostKimi?tab=repositories"><img alt="repositories" src="https://img.shields.io/badge/REPOSITORIES-0A0D14?style=flat-square&logo=github&logoColor=white"></a>
   <a href="https://github.com/HoarfrostKimi/Video-Merger/releases"><img alt="video-merger" src="https://img.shields.io/github/v/release/HoarfrostKimi/Video-Merger?style=flat-square&label=VIDEO-MERGER&color=0A0D14&logo=electron&logoColor=9FEAF9"></a>
   <a href="https://github.com/HoarfrostKimi/PredictCoin/releases"><img alt="predictcoin" src="https://img.shields.io/github/v/release/HoarfrostKimi/PredictCoin?style=flat-square&label=PREDICT-COIN&color=0A0D14&logo=android&logoColor=3DDC84"></a>
@@ -12,17 +13,41 @@
 
 ### 关于
 
-写代码的动机通常很朴素：**有些事太重复了，重复到值得写个工具。**
+写代码的动机通常很朴素：**有些事太重复了，重复到值得写个工具**；也有些 App 好看到让人想拆开重写一遍。
 
-录播下播后是一堆 FLV 分段，要按场次拼起来、还要投到 B 站 —— 于是有了 [Video-Merger](https://github.com/HoarfrostKimi/Video-Merger)。
-B 站赛事预测每场都要算仓位，靠感觉容易上头 —— 于是有了 [PredictCoin](https://github.com/HoarfrostKimi/PredictCoin)，顺手把凯利公式在双边奖池下重新推了一遍。
+主战场是 **Kotlin / Android**：MVVM、Paging 3、协程与 Flow、自绘组件。桌面上的活交给 **TypeScript + Electron**，音视频交给 **FFmpeg**。
 
-主战场是 **Kotlin / Android**：MVVM、Room、自绘组件、不依赖 Android 的纯函数计算引擎。
-桌面上的活交给 **TypeScript + Electron**，音视频交给 **FFmpeg**。
+打得最完整的是 [开眼 OpenEyes](https://github.com/generalio/OpenEyes) —— 两个人从零拆模块写完的短视频客户端，发现与排行两个模块归我。
 
 ---
 
-### 作品
+### 主项目 · 开眼 OpenEyes
+
+> 短视频 Android 客户端，按业务拆成 `app` / `lib_base` / `lib_net` / `module_home` / `module_discover` / `module_rankings` 六个模块，接口层与 UI 层分开，各模块独立编译。
+> 我负责 **发现** 和 **排行**：从 UI 标注、分页加载到播放器，都是自己写下来的。
+
+<p align="center">
+  <img src="assets/shots/theme.gif" width="29%" alt="发现 · 推荐主题" />
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/shots/rankings.gif" width="29%" alt="排行 · 自动播放" />
+</p>
+
+<p align="center"><sub>发现 · 主题列表的共享元素转场　　·　　排行 · 首项升级为视频卡并自动播放</sub></p>
+
+| 模块 | 实现 |
+| :-- | :-- |
+| **发现** | 分类网格 + 主题推荐。分类页用 **RV 嵌套 RV** 换掉 ScrollView —— 不然上滑时没法跟底部导航栏联动；分类详情用协调者布局，折叠后分类名收进 Toolbar；主题列表做共享元素转场，并加 50ms 延迟避开首帧未加载导致的动画畸变 |
+| **排行** | ViewPager2 双页切换，重写 ConstraintLayout 解决与外层滚动的滑动冲突；切到排行页时首个 item 自动升级成视频卡并用 ExoPlayer 播放，滑出屏幕立即降级、暂停并释放播放器 |
+| **数据** | **Paging 3 + Flow** 做无限加载，`LoadStateAdapter` 统一 loading / retry / 到底三种状态；网络层以 Retrofit + Flow + StateFlow 为主，部分老页面沿用 RxJava + LiveData |
+| **踩过的坑** | 列表复用导致播放器错位、转场首帧畸变、ViewPager2 与内层 RV 争抢滑动 —— 全都是自己定位、自己改的 |
+
+`Kotlin` `Jetpack` `MVVM` `Paging 3` `Coroutines` `Flow` `Retrofit` `RxJava` `ExoPlayer` `ViewPager2`
+
+仓库：[generalio/OpenEyes](https://github.com/generalio/OpenEyes)
+
+---
+
+### 其他作品
 
 | 项目 | 解决什么问题 | 技术栈 |
 | :-- | :-- | :-- |
@@ -54,9 +79,11 @@ B 站赛事预测每场都要算仓位，靠感觉容易上头 —— 于是有�
 
 ![Android](https://img.shields.io/badge/Android-0A0D14?style=flat-square&logo=android&logoColor=3DDC84)
 ![Jetpack](https://img.shields.io/badge/Jetpack-0A0D14?style=flat-square&logo=android&logoColor=3DDC84)
-![Material Design](https://img.shields.io/badge/Material%20Design-0A0D14?style=flat-square&logo=materialdesign&logoColor=757575)
-![RxJava](https://img.shields.io/badge/RxJava-0A0D14?style=flat-square&logo=reactivex&logoColor=B7178C)
+![Paging 3](https://img.shields.io/badge/Paging%203-0A0D14?style=flat-square&logo=android&logoColor=3DDC84)
+![Coroutines](https://img.shields.io/badge/Coroutines%20%2F%20Flow-0A0D14?style=flat-square&logo=kotlin&logoColor=7F52FF)
 ![Room](https://img.shields.io/badge/Room-0A0D14?style=flat-square&logo=sqlite&logoColor=003B57)
+![ExoPlayer](https://img.shields.io/badge/ExoPlayer-0A0D14?style=flat-square&logo=android&logoColor=3DDC84)
+![RxJava](https://img.shields.io/badge/RxJava-0A0D14?style=flat-square&logo=reactivex&logoColor=B7178C)
 
 **桌面与工具**
 

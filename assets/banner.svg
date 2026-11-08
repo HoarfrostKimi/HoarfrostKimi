@@ -47,16 +47,16 @@
 
   <text x="72" y="200" fill="url(#hkmName)" font-family="'Segoe UI', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif" font-size="82" font-weight="600" letter-spacing="-2">HoarfrostKimi</text>
 
-  <text x="74" y="252" fill="#A3B0C2" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif" font-size="23" letter-spacing="0.8">黎枝 · 把重复劳动写成能跑的工具</text>
+  <text x="74" y="252" fill="#A3B0C2" font-family="'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif" font-size="23" letter-spacing="0.8">黎枝 · 把重复劳动写成工具，把喜欢的 App 拆开重写</text>
 
   <rect x="72" y="282" width="620" height="1" fill="url(#hkmRule)"/>
 
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5" letter-spacing="1.2">
     <text x="72" y="316" fill="#6B7788">KOTLIN / ANDROID</text>
     <text x="222" y="316" fill="#39414F">/</text>
-    <text x="244" y="316" fill="#6B7788">ELECTRON / TYPESCRIPT</text>
-    <text x="438" y="316" fill="#39414F">/</text>
-    <text x="460" y="316" fill="#6B7788">FFMPEG / AUTOMATION</text>
+    <text x="244" y="316" fill="#6B7788">JETPACK / MODULAR</text>
+    <text x="414" y="316" fill="#39414F">/</text>
+    <text x="436" y="316" fill="#6B7788">ELECTRON / TYPESCRIPT</text>
   </g>
 
   <!-- right ornament -->
